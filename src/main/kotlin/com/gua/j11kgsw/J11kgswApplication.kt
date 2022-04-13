@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class J11kgswApplication
 
 fun main(args: Array<String>) {
-	runApplication<J11kgswApplication>(*args)
+    runApplication<J11kgswApplication>(*args)
 }

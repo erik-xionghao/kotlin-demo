@@ -5,12 +5,19 @@ import com.gua.j11kgsw.pojo.Message
 import org.springframework.stereotype.Service
 
 @Service
-class MessageService(val db: MessageRepository){
-    fun findMessage():List<Message>{
+class MessageService(val db: MessageRepository) {
+    fun findMessage(): List<Message> {
         return db.findMessage()
     }
 
-    fun addMessage(message: Message){
+    fun addMessage(message: Message) {
         db.save(message)
+    }
+
+    fun deleteMessage(message: Message) {
+        val id = message.id
+        if (id != null) {
+            db.deleteById(id)
+        }
     }
 }

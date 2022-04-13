@@ -5,4 +5,4 @@ import org.springframework.data.relational.core.mapping.Table
 
 
 @Table("message")
-data class Message(@Id val id: String?, val text: String)
+data class Message(@Id val id: Int?, val text: String)
