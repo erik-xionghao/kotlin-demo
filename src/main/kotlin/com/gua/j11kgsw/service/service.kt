@@ -14,10 +14,7 @@ class MessageService(val db: MessageRepository) {
         db.save(message)
     }
 
-    fun deleteMessage(message: Message) {
-        val id = message.id
-        if (id != null) {
-            db.deleteById(id)
-        }
+    fun deleteMessage(id: Int) {
+        db.deleteById(id)
     }
 }

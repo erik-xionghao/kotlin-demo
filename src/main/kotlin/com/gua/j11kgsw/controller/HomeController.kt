@@ -22,11 +22,8 @@ class MessageController(val service: MessageService) {
         return service.addMessage(message)
     }
 
-    @PostMapping("/delete")
-    fun deleteMessage(@RequestBody message: Message) {
-        if (message.id == null) {
-            throw Exception("id can not is null")
-        }
-        return service.deleteMessage(message)
+    @GetMapping("/delete")
+    fun deleteMessage(id: Int) {
+        return service.deleteMessage(id)
     }
 }
