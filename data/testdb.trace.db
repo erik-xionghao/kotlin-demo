@@ -1,0 +1,2 @@
+2022-04-12 18:31:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table if no exists message{[*]" [42000-200]
